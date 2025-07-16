@@ -1,0 +1,595 @@
+/* Import Font dari Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+/* Variabel Warna & Reset Dasar */
+
+:root {
+    --primary-color: #ebcd28;
+    /* Warna emas/oranye khas 'Jawara' */
+    --dark-color: #080201;
+    --light-color: #f8e009eb;
+    --text-color: #170202;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #fcfae7d9;
+    color: var(--);
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.content-section {
+    padding: 60px 0;
+}
+
+.content-section h2 {
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    /* Judul selalu di tengah */
+}
+
+.alt-bg {
+    background-color: var(--light-color);
+}
+
+
+/* Header & Navigasi */
+
+header {
+    background: rgba(0, 0, 0, 0.7);
+    color: #e6d40f;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    /* Tambahkan !important untuk memaksa perubahan */
+    color: #f3f70b !important;
+    text-decoration: none;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+header nav ul li a:hover {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+
+/* ======================================= */
+
+
+/* == Gaya Hero Section (SUDAH DIPERBAIKI) == */
+
+
+/* ======================================= */
+
+#hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    background-color: #222;
+    /* Cadangan jika video gagal loading */
+}
+
+#hero .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* Lapisan paling bawah */
+}
+
+#hero .video-background iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    /* Lapisan di atas video */
+}
+
+#hero .hero-content {
+    position: relative;
+    z-index: 3;
+    /* Lapisan paling atas */
+    padding: 20px;
+}
+
+hero-logo {
+    width: 150px;
+    /* Atur ukuran logo sesuai keinginan */
+    height: auto;
+    margin-bottom: 25px;
+    /* Memberi jarak antara logo dan judul */
+}
+
+#hero h1 {
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 5rem;
+}
+
+#hero p {
+    font-size: 2rem;
+    max-width: 600px;
+    margin: 1rem auto;
+}
+
+
+/* Program Unggulan */
+
+.program-cards {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    padding: 30px;
+    width: 320px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: justify;
+    /* Konten kartu di tengah */
+}
+
+.card i {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+
+/* Galeri Kegiatan */
+
+.galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.galeri-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+/* Footer (Peta & Kontak) */
+
+footer {
+    background-color: var(--dark-color);
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-map,
+.footer-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.footer-map {
+    height: 300px;
+}
+
+.footer-info {
+    padding-left: 20px;
+    /* Sedikit dikurangi paddingnya */
+}
+
+.footer-info h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.social-media a {
+    color: #fff;
+    font-size: 2.Orem;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    background: #000;
+    text-align: center;
+    padding: 1rem;
+    font-size: 10 rem;
+}
+
+
+/* Visi & Misi Section */
+
+#visi-misi {
+    text-align: center;
+}
+
+#visi-misi h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 2 rem;
+}
+
+#visi-misi ol {
+    display: inline-block;
+    text-align: left;
+    /* Agar nomor urut rapi */
+    max-width: 800px;
+}
+
+
+/* ======================================= */
+
+
+/* == Gaya Halaman Struktur Organisasi  == */
+
+
+/* ======================================= */
+
+.page-header {
+    padding-top: 120px;
+    /* Jarak dari header */
+    padding-bottom: 40px;
+    text-align: center;
+    background-color: var(--light-color);
+}
+
+.page-header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    color: var(--dark-color);
+}
+
+#struktur-organisasi {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+#struktur-organisasi h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.org-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    /* Jarak antar kartu */
+}
+
+.kartu-pengurus {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    width: 240px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.kartu-pengurus:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.kartu-pengurus img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    /* Membuat foto bulat */
+    object-fit: cover;
+    border: 5px solid var(--light-color);
+    margin-bottom: 15px;
+}
+
+.kartu-pengurus h4 {
+    margin: 10px 0 5px 0;
+    font-size: 1.2rem;
+    color: var(--dark-color);
+}
+
+.kartu-pengurus .jabatan {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+    font-weight: bold;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #e9ecef;
+    margin: 60px auto;
+    width: 80%;
+}
+
+
+/* ======================================= */
+
+
+/* ==   Gaya Halaman Detail Program     == */
+
+
+/* ======================================= */
+
+#program-detail .program-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.program-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 25px;
+    background-color: var(--light-color);
+    border-radius: 8px;
+}
+
+.program-item .program-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-top: 5px;
+}
+
+.program-item .program-text h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+
+/* ======================================= */
+
+
+/* ==      Gaya Halaman Galeri          == */
+
+
+/* ======================================= */
+
+#galeri-lengkap {
+    padding: 60px 0;
+}
+
+.galeri-grid-lengkap {
+    display: grid;
+    /* Membuat 3 kolom di layar besar, 2 di sedang, 1 di kecil */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.galeri-grid-lengkap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeri-grid-lengkap img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* === MEDIA QUERY UNTUK PONSEL === */
+
+
+/* Aturan di dalam blok ini hanya akan aktif jika lebar layar 768px atau kurang */
+
+@media (max-width: 768px) {
+    /* Kita ubah arah navigasi dari horizontal menjadi vertikal */
+    .navigasi {
+        flex-direction: column;
+        /* Item menu akan tersusun ke bawah */
+        align-items: center;
+        /* Pusatkan item di tengah */
+    }
+    /* Beri jarak antar menu agar tidak terlalu rapat */
+    .navigasi a {
+        /* Misalkan link menu Anda adalah tag <a> di dalam .navigasi */
+        padding: 10px 0;
+        font-size: 18px;
+        /* Mungkin perlu perbesar font agar mudah disentuh */
+    }
+    /* Mungkin Anda juga perlu menyesuaikan ukuran logo atau judul */
+    .logo-utama {
+        width: 150px;
+        /* Perkecil ukuran logo di ponsel */
+    }
+    .judul-utama {
+        font-size: 2.5em;
+        /* Perkecil ukuran font judul */
+    }
+}
+
+
+/* ======================================= */
+
+
+/* == Gaya Halaman Struktur Organisasi  == */
+
+
+/* ======================================= */
+
+.page-header {
+    padding-top: 120px;
+    /* Jarak dari header */
+    padding-bottom: 40px;
+    text-align: center;
+    background-color: var(--light-color);
+}
+
+.page-header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    color: var(--dark-color);
+}
+
+#struktur-organisasi {
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.org-chart {
+    text-align: center;
+}
+
+.org-level {
+    /* Memberi jarak antar tingkatan (level) */
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+/* Garis vertikal penghubung */
+
+.org-level:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 50px;
+    background-color: #ddd;
+}
+
+.org-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    /* Jarak antar kartu */
+}
+
+
+/* Hapus garis vertikal untuk level sebelum barisan divisi */
+
+#struktur-organisasi .org-level:nth-last-child(2)::after {
+    display: none;
+}
+
+.kartu-pengurus {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    width: 240px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    z-index: 5;
+    /* Pastikan kartu di atas garis */
+    border: 1px solid #eee;
+}
+
+.kartu-pengurus:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.kartu-pengurus img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    /* Membuat foto bulat */
+    object-fit: cover;
+    border: 5px solid var(--light-color);
+    margin-bottom: 15px;
+}
+
+.kartu-pengurus h4 {
+    margin: 10px 0 5px 0;
+    font-size: 1.2rem;
+    color: var(--dark-color);
+}
+
+.kartu-pengurus .jabatan {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+hr {
+    display: none;
+    /* Kita tidak pakai <hr> lagi */
+}
